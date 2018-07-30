@@ -17,8 +17,11 @@ $(TARGET): $(OBJS)
 
 $(OBJS): $(HDRS)
 
-.phony: clean
+.phony: clean install
 
 clean:
 	$(RM) $(TARGET) $(OBJS)
 
+install: $(TARGET)
+	mkdir -p $(DESTDIR)/bin
+	cp $(TARGET) $(DESTDIR)/bin/$(TARGET)
