@@ -5,6 +5,7 @@ CXX = clang++
 CC = $(CXX)
 CXXFLAGS = -std=c++17 -g -Wall -Wpedantic
 LDFLAGS = -std=c++17
+LDLIBS =
 
 #SOURCES = $(wildcard *.cpp)
 SOURCES = $(TARGET).cpp
