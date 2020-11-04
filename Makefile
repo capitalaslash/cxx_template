@@ -3,8 +3,8 @@ TARGET := main
 
 CXX = clang++
 CC = $(CXX)
-CXXFLAGS = -std=c++14 -g -Wall -Wpedantic
-LDFLAGS = -std=c++14
+CXXFLAGS = -std=c++17 -g -Wall -Wpedantic
+LDFLAGS = -std=c++17
 
 #SOURCES = $(wildcard *.cpp)
 SOURCES = $(TARGET).cpp
