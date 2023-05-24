@@ -34,3 +34,18 @@ target_link_libraries(main
 )
 
 feature_summary(WHAT ALL)
+
+find_program(CLANGFORMAT clang-format)
+if (CLANGFORMAT)
+  add_custom_target(format
+    COMMAND ${CLANGFORMAT}
+    -i
+    ${SRC_FILES}
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  )
+else()
+  add_custom_target(format
+    COMMAND echo "clang-format could not be found"
+  )
+endif()
+
