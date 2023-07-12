@@ -50,7 +50,7 @@ find_program(CLANGFORMAT clang-format)
 if (CLANGFORMAT)
   add_custom_target(format
     COMMAND ${CLANGFORMAT}
-    -i
+    --verbose -i
     ${SRC_FILES} ${HEADER_FILES}
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   )
